@@ -25,7 +25,7 @@
 - healthy, responsive; small doc/typo PRs from outsiders have merged recently
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
-- (none yet for fd)
+- 2026-09-03: trivial-fix pass — 5 fixes (CHANGELOG typos calander/ouput, README "options … option" x2, fd.1 regex link 1.0.0→latest). PR #1 opened in fork (docs/trivial-fixes). DONE.
 
 ## Mined gaps (discovered, not yet attempted)
 - (none yet)
