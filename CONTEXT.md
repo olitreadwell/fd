@@ -1,5 +1,5 @@
 # sharkdp/fd context
-> refreshed 2026-09-03 | upstream default: master @ 1765d0817b4e706141115b81c29a5965630e243a
+> refreshed 2026-09-30 | upstream default: master @ ce97e473ebaec49697c07daa50a7bc2b32f713d2
 
 ## Identity & policies
 - upstream: sharkdp/fd, default branch master, primary language Rust, English-first (yes — README/docs in English)
@@ -21,11 +21,12 @@
 - areas actively worked: jemalloc, error handling, changelog/release chores
 
 ## Issue-area health
-- 198 open issues, 20 open PRs (mostly dependabot + a few feature PRs)
+- 40+ open issues, 20+ open PRs (mostly dependabot + a few feature PRs); refreshed 2026-09-30
 - healthy, responsive; small doc/typo PRs from outsiders have merged recently
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - 2026-09-03: trivial-fix pass — 5 fixes (CHANGELOG typos calander/ouput, README "options … option" x2, fd.1 regex link 1.0.0→latest). PR #1 opened in fork (docs/trivial-fixes). DONE.
+- 2026-09-30: self-found gap (repo-audit) — zsh completion `contrib/completion/_fd` omits `--format`, `--ignore-contain`, `--quiet`/`--has-results`. PR opened in fork (docs/zsh-completion-options). DONE.
 
 ## Mined gaps (discovered, not yet attempted)
-- (none yet)
+- 2026-09-30 zsh completion omits three CLI options present in `fd --help` (`--format <fmt>`, `--ignore-contain <name>`, `--quiet`/`-q` alias `--has-results`) — status: attempted (PR opened 2026-09-30, docs/zsh-completion-options).
