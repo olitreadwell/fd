@@ -369,7 +369,7 @@ Benchmark 2: find ~ -iname '*[0-9].jpg'
 ```
 
 Now let's try the same for `fd`. Note that `fd` performs a regular expression
-search by default. The options `-u`/`--unrestricted` option is needed here for
+search by default. The `-u`/`--unrestricted` option is needed here for
 a fair comparison. Otherwise `fd` does not have to traverse hidden folders and
 ignored paths (see below):
 ```
@@ -395,7 +395,7 @@ also used in [ripgrep](https://github.com/BurntSushi/ripgrep) (check it out!).
 
 Remember that `fd` ignores hidden directories and files by default. It also ignores patterns
 from `.gitignore` files. If you want to make sure to find absolutely every possible file, always
-use the options `-u`/`--unrestricted` option (or `-HI` to enable hidden and ignored files):
+use the `-u`/`--unrestricted` option (or `-HI` to enable hidden and ignored files):
 ``` bash
 > fd -u …
 ```
