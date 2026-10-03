@@ -88,11 +88,18 @@ _fd() {
     '(long-listing)'{-0,--print0}'[separate search results by the null character]'
 
     + '(long-listing)' # long-listing output
-    '(abs-path null-sep max-results exec-cmds)'{-l,--list-details}'[use a long listing format with file metadata]'
+    '(abs-path null-sep max-results exec-cmds format)'{-l,--list-details}'[use a long listing format with file metadata]'
+
+    + '(format)' # custom output format
+    '(long-listing)--format=[print results according to template]:format template'
 
     + '(max-results)' # max number of results
-    '(long-listing exec-cmds)--max-results=[limit number of search results to given count and quit]:count'
-    '(long-listing exec-cmds)-1[limit to a single search result and quit]'
+    '(long-listing exec-cmds quiet)--max-results=[limit number of search results to given count and quit]:count'
+    '(long-listing exec-cmds quiet)-1[limit to a single search result and quit]'
+
+    + '(quiet)' # quiet mode
+    '(max-results)'{-q,--quiet}'[print nothing, exit code 0 if a match is found, 1 otherwise]'
+    '(max-results)--has-results[alias for --quiet]'
 
     + '(fs-errors)' # file-system errors
     $no'--show-errors[enable the display of filesystem errors]'
@@ -120,6 +127,9 @@ _fd() {
 
     + ignore-file # extra ignore files
     '*--ignore-file=[add a custom, low-precedence ignore-file with .gitignore format]: :_files'
+
+    + ignore-contain # ignore directories containing a named entry
+    '*--ignore-contain=[ignore directories containing the named entry]:name'
 
     + '(filter-mtime-newer)' # filter by files modified after than
     '--changed-within=[limit search to files/directories modified within the given date/duration]:date or duration'
