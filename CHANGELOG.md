@@ -75,7 +75,7 @@ This is just a re-release of 10.4.0 due to an issue with the 10.4.0 release.
 - Replace `humantime` crate and `chrono` crate with `jiff` crate, see #1690 (@sorairolake). This has some small changes to the
   way dates given to options such `--changed-within` and `--changed-before` including:
   - 'M' no longer means "month", as that could be confusing with minutes. Use "mo", "mos", "month" or "months" instead.
-  - month and year now account for variability in the calander rather than being a hard-coded number of seconds. That is probably
+  - month and year now account for variability in the calendar rather than being a hard-coded number of seconds. That is probably
     what you would expect, but it is a slight change in behavior.
 - aarch64 Windows was added to CI and release artifacts
 - Many dependencies were updated
@@ -113,7 +113,7 @@ x86_64/intel Macs and Windows 7.
 ## Features
 
 - Allow passing an optional argument to `--strip-cwd-prefix` of "always", "never", or "auto". to force whether the cwd prefix is stripped or not.
-- Add a `--format` option which allows using a format template for direct ouput similar to the template used for `--exec`. (#1043)
+- Add a `--format` option which allows using a format template for direct output similar to the template used for `--exec`. (#1043)
 
 ## Bugfixes
 - Fix aarch64 page size again. This time it should actually work. (#1085, #1549) (@tavianator)
@@ -530,7 +530,7 @@ No functional changes with respect to v8.2.0. Bugfix in the release process.
 
 - Pre-built `fd` binaries should now be available for `armhf` targets, see #457 (@detly)
 - `fd` is now available on Alpine Linux, see #451 (@5paceToast)
-- `fd` is now in the officla FreeBSD repositories, see #412 (@t6)
+- `fd` is now in the official FreeBSD repositories, see #412 (@t6)
 - Added OpenBSD install instructions, see #421 (@evitalis)
 - Added metadata to the Debian package, see #416 (@cathalgarvey)
 - `fd` can be installed via npm, see #438 (@pablopunk)
