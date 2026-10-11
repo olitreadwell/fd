@@ -1,5 +1,5 @@
 # sharkdp/fd context
-> refreshed 2026-09-30 | upstream default: master @ ce97e473ebaec49697c07daa50a7bc2b32f713d2
+> refreshed 2026-10-11 | upstream default: master @ 14dcd92fb76ca0ebc2e82671a275f67c790d25fc
 
 ## Identity & policies
 - upstream: sharkdp/fd, default branch master, primary language Rust, English-first (yes — README/docs in English)
@@ -27,6 +27,7 @@
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - 2026-09-03: trivial-fix pass — 5 fixes (CHANGELOG typos calander/ouput, README "options … option" x2, fd.1 regex link 1.0.0→latest). PR #1 opened in fork (docs/trivial-fixes). DONE.
 - 2026-09-30: self-found gap (repo-audit) — zsh completion `contrib/completion/_fd` omits `--format`, `--ignore-contain`, `--quiet`/`--has-results`. PR opened in fork (docs/zsh-completion-options). DONE.
+- 2026-10-11: trivial-fix pass — 4 fixes in 4 files (README "inplace"->"in place", CHANGELOG "officla"->"official", scripts/create-deb.sh "all of finds powerful"->"find's", tests/tests.rs "failde"->"failed"). Exhaustive sweep (codespell, typos-cli, doubled-word/possessive grep, link liveness) found nothing else genuine; AU/UK spellings left as-is; `gawk -i inplace` is a real flag. PR #9 opened in fork (docs/minor-typo-fixes). DONE.
 
 ## Mined gaps (discovered, not yet attempted)
 - 2026-09-30 zsh completion omits three CLI options present in `fd --help` (`--format <fmt>`, `--ignore-contain <name>`, `--quiet`/`-q` alias `--has-results`) — status: attempted (PR opened 2026-09-30, docs/zsh-completion-options).
