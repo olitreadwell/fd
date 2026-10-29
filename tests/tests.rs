@@ -2661,7 +2661,7 @@ fn change_file_modified<P: AsRef<Path>>(path: P, iso_date: &str) {
         .map(SystemTime::from)
         .expect("invalid date");
     let ft = filetime::FileTime::from_system_time(st);
-    filetime::set_file_times(path, ft, ft).expect("time modification failde");
+    filetime::set_file_times(path, ft, ft).expect("time modification failed");
 }
 
 #[test]
